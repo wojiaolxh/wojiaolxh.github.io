@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>computed和watch | 勿忘的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/avatar.png">
+    <meta name="description" content="网站描述">
+    
+    <link rel="preload" href="/assets/css/0.styles.b23bcaa9.css" as="style"><link rel="preload" href="/assets/js/app.f1c655d9.js" as="script"><link rel="preload" href="/assets/js/2.5f75bc7c.js" as="script"><link rel="preload" href="/assets/js/29.5b6ed7a7.js" as="script"><link rel="prefetch" href="/assets/js/10.a71d7304.js"><link rel="prefetch" href="/assets/js/11.6f94e497.js"><link rel="prefetch" href="/assets/js/12.0d179624.js"><link rel="prefetch" href="/assets/js/13.e9a89278.js"><link rel="prefetch" href="/assets/js/14.7d41ea20.js"><link rel="prefetch" href="/assets/js/15.c14d442c.js"><link rel="prefetch" href="/assets/js/16.8a2ee272.js"><link rel="prefetch" href="/assets/js/17.a683bc65.js"><link rel="prefetch" href="/assets/js/18.7bd3e1ed.js"><link rel="prefetch" href="/assets/js/19.0d723740.js"><link rel="prefetch" href="/assets/js/20.d18ca8a4.js"><link rel="prefetch" href="/assets/js/21.22b75bfe.js"><link rel="prefetch" href="/assets/js/22.7e6fb782.js"><link rel="prefetch" href="/assets/js/23.9002abe0.js"><link rel="prefetch" href="/assets/js/24.7e00f53a.js"><link rel="prefetch" href="/assets/js/25.c9dbf47b.js"><link rel="prefetch" href="/assets/js/26.f116f6c6.js"><link rel="prefetch" href="/assets/js/27.553a66cd.js"><link rel="prefetch" href="/assets/js/28.a17b96a4.js"><link rel="prefetch" href="/assets/js/3.b77b1dc1.js"><link rel="prefetch" href="/assets/js/30.cdb3c8c7.js"><link rel="prefetch" href="/assets/js/31.6280fb91.js"><link rel="prefetch" href="/assets/js/32.0ef13458.js"><link rel="prefetch" href="/assets/js/33.d5779eeb.js"><link rel="prefetch" href="/assets/js/34.7375a1d9.js"><link rel="prefetch" href="/assets/js/35.b6854634.js"><link rel="prefetch" href="/assets/js/36.4c72afe9.js"><link rel="prefetch" href="/assets/js/37.c4b38050.js"><link rel="prefetch" href="/assets/js/4.053c9f86.js"><link rel="prefetch" href="/assets/js/5.3a29ffe9.js"><link rel="prefetch" href="/assets/js/6.7e1392e3.js"><link rel="prefetch" href="/assets/js/7.1f0c4561.js"><link rel="prefetch" href="/assets/js/8.31476672.js"><link rel="prefetch" href="/assets/js/9.40c7d040.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b23bcaa9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/avatar.png" alt="勿忘的博客" class="logo"> <span class="site-name can-hide">勿忘的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端积累" class="dropdown-title"><span class="title">前端积累</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端积累" class="mobile-dropdown-title"><span class="title">前端积累</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/html/" class="nav-link">
+  html css积累
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/js/DebounceAndThrottle.html" class="nav-link">
+  javascript积累
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/vue/" class="nav-link router-link-active">
+  vue积累
+</a></li></ul></div></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  前端算法
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端积累" class="dropdown-title"><span class="title">前端积累</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端积累" class="mobile-dropdown-title"><span class="title">前端积累</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fontend/html/" class="nav-link">
+  html css积累
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/js/DebounceAndThrottle.html" class="nav-link">
+  javascript积累
+</a></li><li class="dropdown-item"><!----> <a href="/fontend/vue/" class="nav-link router-link-active">
+  vue积累
+</a></li></ul></div></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  前端算法
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>html</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fontend/vue/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/fontend/vue/DefineGlobalFun.html" class="sidebar-link">定义全局函数</a></li><li><a href="/fontend/vue/Vuex.html" class="sidebar-link">Vuex</a></li><li><a href="/fontend/vue/ComponentPassValue.html" class="sidebar-link">Vue组件传值</a></li><li><a href="/fontend/vue/MVVM.html" class="sidebar-link">Vue双向数据绑定原理</a></li><li><a href="/fontend/vue/ComputedAndWatch.html" aria-current="page" class="active sidebar-link">computed和watch</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fontend/vue/ComputedAndWatch.html#定义" class="sidebar-link">定义</a></li><li class="sidebar-sub-header"><a href="/fontend/vue/ComputedAndWatch.html#异同点" class="sidebar-link">异同点</a></li></ul></li><li><a href="/fontend/vue/VueSlot.html" class="sidebar-link">Vue 插槽(slot)</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="computed和watch"><a href="#computed和watch" class="header-anchor">#</a> computed和watch</h1> <h2 id="定义"><a href="#定义" class="header-anchor">#</a> 定义</h2> <h3 id="_1-computed是计算属性-类似于过滤器-对绑定到视图的数据进行处理-并监听变化进而执行对应的方法"><a href="#_1-computed是计算属性-类似于过滤器-对绑定到视图的数据进行处理-并监听变化进而执行对应的方法" class="header-anchor">#</a> 1.computed是计算属性，类似于过滤器,对绑定到视图的数据进行处理,并监听变化进而执行对应的方法</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>example<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Original message: &quot;{{ message }}&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Computed reversed message: &quot;{{ reversedMessage }}&quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token operator">:</span> <span class="token string">'#example'</span><span class="token punctuation">,</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    message<span class="token operator">:</span> <span class="token string">'Hello'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 计算属性的 getter</span>
+    <span class="token function-variable function">reversedMessage</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// `this` 指向 vm 实例</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>结果：</p> <div class="language-html extra-class"><pre class="language-html"><code>Original message: &quot;Hello&quot;
+Computed reversed message: &quot;olleH&quot;
+</code></pre></div><p>计算属性是基于它们的依赖进行缓存的。只在相关依赖发生改变时它们才会重新求值。<em>值得注意的是“reversedMessage”不能在组件的<code>props</code>和<code>data</code>中定义，否则会报错。</em></p> <h3 id="_2-watch是一个侦听的动作-用来观察和响应-vue-实例上的数据变动。"><a href="#_2-watch是一个侦听的动作-用来观察和响应-vue-实例上的数据变动。" class="header-anchor">#</a> 2.watch是一个侦听的动作，用来观察和响应 Vue 实例上的数据变动。</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>watch-example<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+    Ask a yes/no question:
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>question<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ answer }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 因为 <span class="token constant">AJAX</span> 库和通用工具的生态已经相当丰富，Vue 核心代码没有重复 <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 提供这些功能以保持精简。这也可以让你自由选择自己更熟悉的工具。 <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">&quot;https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">&quot;https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">var</span> watchExampleVM <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token operator">:</span> <span class="token string">'#watch-example'</span><span class="token punctuation">,</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    question<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    answer<span class="token operator">:</span> <span class="token string">'I cannot give you an answer until you ask a question!'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 如果 `question` 发生改变，这个函数就会运行</span>
+    <span class="token function-variable function">question</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">newQuestion<span class="token punctuation">,</span> oldQuestion</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>answer <span class="token operator">=</span> <span class="token string">'Waiting for you to stop typing...'</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">debouncedGetAnswer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">created</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// `_.debounce` 是一个通过 Lodash 限制操作频率的函数。</span>
+    <span class="token comment">// 在这个例子中，我们希望限制访问 yesno.wtf/api 的频率</span>
+    <span class="token comment">// AJAX 请求直到用户输入完毕才会发出。想要了解更多关于</span>
+    <span class="token comment">// `_.debounce` 函数 (及其近亲 `_.throttle`) 的知识，</span>
+    <span class="token comment">// 请参考：https://lodash.com/docs#debounce</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>debouncedGetAnswer <span class="token operator">=</span> _<span class="token punctuation">.</span><span class="token function">debounce</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>getAnswer<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">getAnswer</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>question<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'?'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>answer <span class="token operator">=</span> <span class="token string">'Questions usually contain a question mark. ;-)'</span>
+        <span class="token keyword">return</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>answer <span class="token operator">=</span> <span class="token string">'Thinking...'</span>
+      <span class="token keyword">var</span> vm <span class="token operator">=</span> <span class="token keyword">this</span>
+      axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'https://yesno.wtf/api'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          vm<span class="token punctuation">.</span>answer <span class="token operator">=</span> _<span class="token punctuation">.</span><span class="token function">capitalize</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>answer<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          vm<span class="token punctuation">.</span>answer <span class="token operator">=</span> <span class="token string">'Error! Could not reach the API. '</span> <span class="token operator">+</span> error
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+</code></pre></div><p>在这个示例中，使用 watch 选项允许我们执行异步操作 (访问一个 API)，限制我们执行该操作的频率，并在我们得到最终结果前，设置中间状态。这些都是计算属性无法做到的。</p> <h2 id="异同点"><a href="#异同点" class="header-anchor">#</a> 异同点</h2> <p><em>相同</em>： <code>computed</code>和<code>watch</code>都起到监听/依赖一个数据，并进行处理的作用</p> <p><em>异同</em>：它们其实都是<code>vue</code>对监听器的实现，只不过<code>computed</code>主要用于对同步数据的处理，<code>watch</code>则主要用于观测某个值的变化去完成一段开销较大的复杂业务逻辑。<em>能用computed的时候优先用computed，避免了多个数据影响其中某个数据时多次调用watch的尴尬情况。</em></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fontend/vue/MVVM.html" class="prev">
+        Vue双向数据绑定原理
+      </a></span> <span class="next"><a href="/fontend/vue/VueSlot.html">
+        Vue 插槽(slot)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f1c655d9.js" defer></script><script src="/assets/js/2.5f75bc7c.js" defer></script><script src="/assets/js/29.5b6ed7a7.js" defer></script>
+  </body>
+</html>
